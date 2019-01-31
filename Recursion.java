@@ -7,6 +7,15 @@ public class Recursion{
      *precondition: n is non-negative
 
     */
+	public static void main(String[] args) {
+		System.out.println(fib(0));
+		System.out.println(fib(1));
+		System.out.println(fib(2));
+		System.out.println(fib(3));
+		System.out.println(fib(5));
+		System.out.println(fib(8));
+		System.out.println(fib(1000));
+	}
 	public static double sqrt(double n, double tolerance) {
 		if (n < 0) {
 			throw new IllegalArgumentException("You cannot square root a negative number.");
