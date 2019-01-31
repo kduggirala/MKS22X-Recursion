@@ -28,9 +28,17 @@ public class Recursion{
      *precondition: n is non-negative
      */
     public static int fib(int n){
-
+    	if (n < 0) {
+    		throw new IllegalArgumentException("There are no negative fibonnaci numbers.");   
+    	}
+    	return fibHelp(n, 0, 1, 0);
     }
-    
+    public static int fibHelp(int n, int a, int b, int i) {
+    	if (i == n) {
+    		return a;
+    	}
+    	return fibHelp(n, b, a+b, i+1);
+    }
 
  
     public static ArrayList<Integer> makeAllSums(){
