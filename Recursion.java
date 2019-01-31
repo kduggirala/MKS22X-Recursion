@@ -33,7 +33,7 @@ public class Recursion{
 	}
 
     /*Recursively find the n'th fibbonaci number in linear time
-     *fib(0) = 1; fib(1) = 1; fib(5) = 5
+     *fib(0) = 0; fib(1) = 1; fib(5) = 5
      *precondition: n is non-negative
      */
     public static int fib(int n){
@@ -50,7 +50,18 @@ public class Recursion{
     }
 
  
-    public static ArrayList<Integer> makeAllSums(){
+    public static ArrayList<Integer> makeAllSums(int n){
+    	ArrayList<Integer> allSums = new ArrayList<Integer>();
+    	makeAllSumsHelp(n, 0, allSums);
+    	return allSums;
     }
-
+    private static void makeAllSumsHelp(int n, int sum, ArrayList<Integer> l) {
+    	if (n == 0) {
+    		l.add(sum);
+    	}
+    	else {
+    		makeAllSumsHelp(n - 1, sum, l);
+    		makeAllSumsHelp(n - 1, sum + n, l);
+    	}
+    }
 }
