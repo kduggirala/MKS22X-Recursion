@@ -8,13 +8,24 @@ public class Recursion{
 
     */
 	public static void main(String[] args) {
-		System.out.println(fib(0));
-		System.out.println(fib(1));
-		System.out.println(fib(2));
-		System.out.println(fib(3));
-		System.out.println(fib(5));
-		System.out.println(fib(8));
-		System.out.println(fib(1000));
+		//test fib
+		for (int i = 0; i < 20; i++) {
+			System.out.print(fib(i) + " ");
+		}
+		System.out.println();
+		//test sqrt
+		for (int i = 0; i < 20; i++) {
+			System.out.print(sqrt(i, 0.00001) + " ");
+		}
+		System.out.println();
+		//test makeAllSums
+		for (int i = 3; i < 7;  i++) {
+			ArrayList<Integer> sums = makeAllSums(i);
+			for(Integer j: sums) {
+				System.out.print(j + " ");
+			}
+			System.out.println();
+		}
 	}
 	public static double sqrt(double n, double tolerance) {
 		if (n < 0) {
