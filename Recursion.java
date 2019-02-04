@@ -19,7 +19,7 @@ public class Recursion{
 		}
 		System.out.println();
 		//test makeAllSums
-		for (int i = 3; i < 7;  i++) {
+		for (int i = -3; i < 7;  i++) {
 			ArrayList<Integer> sums = makeAllSums(i);
 			for(Integer j: sums) {
 				System.out.print(j + " ");
