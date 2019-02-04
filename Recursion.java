@@ -9,17 +9,18 @@ public class Recursion{
     */
 	public static void main(String[] args) {
 		//test fib
-		for (int i = 0; i < 20; i++) {
+		for (int i = 0; i < 40; i++) {
 			System.out.print(fib(i) + " ");
 		}
+		
 		System.out.println();
 		//test sqrt
 		for (int i = 0; i < 20; i++) {
-			System.out.print(sqrt(i, 0.00001) + " ");
+			System.out.print(sqrt(i, 0.0000001) + " ");
 		}
 		System.out.println();
 		//test makeAllSums
-		for (int i = -3; i < 7;  i++) {
+		for (int i = -7; i < 7;  i++) {
 			ArrayList<Integer> sums = makeAllSums(i);
 			for(Integer j: sums) {
 				System.out.print(j + " ");
