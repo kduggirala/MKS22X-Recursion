@@ -63,7 +63,20 @@ public class Recursion{
  
     public static ArrayList<Integer> makeAllSums(int n){
     	ArrayList<Integer> allSums = new ArrayList<Integer>();
-    	makeAllSumsHelp(n, 0, allSums);
+    	if (n < 0) {
+    		makeAllSumsHelp(-n, 0, allSums);
+    	}
+    	else {
+    		makeAllSumsHelp(n, 0, allSums);
+    	}
+    	//If n < 0, make all elements negative
+    	if (n < 0) {
+    		ArrayList<Integer> negativeInts = new ArrayList<Integer>();
+    		for (Integer i : allSums) {
+    			negativeInts.add(-1 * i);
+    		}
+    		allSums = negativeInts;
+    	}
     	return allSums;
     }
     private static void makeAllSumsHelp(int n, int sum, ArrayList<Integer> l) {
