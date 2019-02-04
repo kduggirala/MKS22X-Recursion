@@ -34,7 +34,7 @@ public class Recursion{
     	}
     	return fibHelp(n, 0, 1, 0);
     }
-    public static int fibHelp(int n, int a, int b, int i) {
+    private static int fibHelp(int n, int a, int b, int i) {
     	if (i == n) {
     		return a;
     	}
