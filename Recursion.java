@@ -7,27 +7,7 @@ public class Recursion{
      *precondition: n is non-negative
 
     */
-	public static void main(String[] args) {
-		//test fib
-		for (int i = 0; i < 40; i++) {
-			System.out.print(fib(i) + " ");
-		}
-		
-		System.out.println();
-		//test sqrt
-		for (int i = 0; i < 20; i++) {
-			System.out.print(sqrt(i, 0.0000001) + " ");
-		}
-		System.out.println();
-		//test makeAllSums
-		for (int i = -7; i < 7;  i++) {
-			ArrayList<Integer> sums = makeAllSums(i);
-			for(Integer j: sums) {
-				System.out.print(j + " ");
-			}
-			System.out.println();
-		}
-	}
+	
 	public static double sqrt(double n, double tolerance) {
 		if (n < 0) {
 			throw new IllegalArgumentException("You cannot square root a negative number.");
